@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <title>Traversing & Filtering</title>
+  <style>
+    .container * {
+      display: block;
+      border: 2px solid grey;
+      color: grey;
+      padding: 5px;
+      margin: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div> div [great-grandparent]
+      <ul> ul [grandparent]
+        <li> li [parent]
+          <span>span</span>
+
+        </li>
+      </ul>
+    </div>
+    <div> div [granparent]
+      <p> p [parent]
+        <span>span</span>
+      </p>
+    </div>
+    <div> div [parent]
+      <p>p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>p</p>
+
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      // Direct Parents
+      // $('span').parent().css({'color':'red', 'border':'2px red solid'});
+
+      // All parents
+      // $('span').parents().css({'color':'red', 'border':'2px red solid'});
+
+      // Only UL parents
+      // $('span').parents('ul').css({'color':'red', 'border':'2px red solid'});
+
+      // Until UL
+      // $('span').parentsUntil('div').css({'color':'red', 'border':'2px red solid'});
+
+      // Children
+      // $('div').children().css({'color':'red', 'border':'2px red solid'});
+
+      // Find
+      // $('div').find('p').css({'color':'red', 'border':'2px red solid'});
+
+      // Siblings
+      // $('h2').siblings('p').css({
+      //   'color': 'red',
+      //   'border': '2px red solid'
+      // });
+
+      // Next
+      // $('h2').next().css({'color':'red', 'border':'2px red solid'});
+
+      // Prev
+      // $('h2').prev().css({'color':'red', 'border':'2px red solid'});
+
+      // PrevAll
+      // $('h3').prevAll().css({'color':'red', 'border':'2px red solid'});
+
+      // NextAll
+      // $('h2').nextAll().css({'color':'red', 'border':'2px red solid'});
+
+      // NextUntil
+      // $('p').nextUntil('h3').css({'color':'red', 'border':'2px red solid'});
+
+      // PrevUntil
+      // $('p').prevUntil('span').css({'color':'red', 'border':'2px red solid'});
+
+      // First
+      // $('p').first().css({'color':'red', 'border':'2px red solid'});
+
+      // Last
+      // $('p').last().css({'color':'red', 'border':'2px red solid'});
+
+
+
+
+    });
+  </script>
+</body>
+
+</html>
